@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   annotations:
   name: logstash-test
-  namespace: elasticsearch
+  namespace: default
 data:
   logstash.conf: |-
     input {
@@ -30,7 +30,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: logstash-test
-  namespace: elasticsearch
+  namespace: default
 spec:
   template:
     metadata:
@@ -82,7 +82,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: logstash-test
-  namespace: elasticsearch
+  namespace: default
   labels:
     app: logstash-test
 spec:

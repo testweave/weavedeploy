@@ -27,7 +27,7 @@ metadata:
   labels:
     app: logstash-test
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: logstash-test
   ports:
